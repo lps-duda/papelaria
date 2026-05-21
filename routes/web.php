@@ -1,12 +1,20 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProdutoController;
 
 Route::get('/', function () {
-    $mais_buscados = \App\Models\Produto::take(4)->get();
-    $promocoes = \App\Models\Produto::skip(4)->take(5)->get();
-    return view('welcome', compact('mais_buscados', 'promocoes'));
+    return view('welcome');
 });
 
-Route::resource('produtos', ProdutoController::class);
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__.'/auth.php';
