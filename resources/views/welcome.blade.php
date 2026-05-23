@@ -81,15 +81,18 @@
     <a href="/" class="logo">
         <div class="logo-icon">✏️</div> PapelStore
     </a>
+
     <div class="nav-links">
         <a href="#" class="active">Início</a>
         <a href="{{ route('produtos.index') }}">Produtos</a>
         <a href="#promocoes">Promoções</a>
     </div>
+
     <div class="nav-btns">
-        <button class="btn-out">Login</button>
-        <button class="btn-in">Cadastrar</button>
+    <a href="{{ route('login') }}" class="btn-out">Login</a>
+    <a href="{{ route('register') }}" class="btn-in">Cadastrar</a>
     </div>
+    
 </nav>
 
 <div class="hero">
