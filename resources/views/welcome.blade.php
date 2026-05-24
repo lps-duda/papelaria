@@ -8,7 +8,6 @@
     <style>
         *{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',sans-serif}
         body{background:#fff}
-
         .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 36px;background:#fff;border-bottom:2px solid #E74C3C}
         .logo{display:flex;align-items:center;gap:10px;color:#C0392B;font-size:18px;font-weight:800;text-decoration:none}
         .logo-icon{width:34px;height:34px;background:#E74C3C;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px}
@@ -17,9 +16,8 @@
         .nav-links a:hover{color:#E74C3C}
         .nav-links a.active{color:#E74C3C;font-weight:700;border-bottom:2px solid #E74C3C;padding-bottom:2px}
         .nav-btns{display:flex;gap:8px}
-        .btn-out{border:1.5px solid #E74C3C;color:#E74C3C;background:#fff;padding:6px 16px;border-radius:6px;font-size:12px;font-weight:700;cursor:pointer}
-        .btn-in{background:#E74C3C;color:#fff;border:none;padding:6px 16px;border-radius:6px;font-size:12px;font-weight:700;cursor:pointer}
-
+        .btn-out{border:1.5px solid #E74C3C;color:#E74C3C;background:#fff;padding:6px 16px;border-radius:6px;font-size:12px;font-weight:700;cursor:pointer;text-decoration:none}
+        .btn-in{background:#E74C3C;color:#fff;border:none;padding:6px 16px;border-radius:6px;font-size:12px;font-weight:700;cursor:pointer;text-decoration:none}
         .hero{display:flex;align-items:center;justify-content:space-between;padding:48px 36px;background:#fff;border-bottom:1px solid #fde8e8}
         .hero-left{max-width:420px}
         .hero-tag{display:inline-block;background:#fde8e8;color:#C0392B;font-size:11px;font-weight:700;padding:4px 12px;border-radius:4px;margin-bottom:16px;letter-spacing:0.5px}
@@ -35,13 +33,11 @@
         .hero-card-icon{font-size:28px;margin-bottom:8px}
         .hero-card-name{font-size:11px;font-weight:700;color:#333}
         .hero-card-price{font-size:12px;color:#E74C3C;font-weight:800;margin-top:4px}
-
         .section{padding:40px 36px}
         .section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
         .section-head h2{font-size:20px;font-weight:800;color:#1a1a1a}
         .section-head h2 span{color:#E74C3C}
         .section-head a{font-size:12px;color:#E74C3C;text-decoration:none;font-weight:600}
-
         .glass-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
         .glass-card{background:rgba(255,255,255,0.7);border:1px solid rgba(231,76,60,0.15);border-radius:14px;padding:16px;text-align:center;backdrop-filter:blur(8px);transition:all 0.2s;cursor:pointer;box-shadow:0 2px 12px rgba(231,76,60,0.06)}
         .glass-card:hover{border-color:#E74C3C;transform:translateY(-3px);box-shadow:0 6px 20px rgba(231,76,60,0.12)}
@@ -50,9 +46,7 @@
         .glass-brand{font-size:11px;color:#aaa;margin-bottom:8px}
         .glass-price{font-size:15px;font-weight:800;color:#E74C3C}
         .glass-badge{display:inline-block;background:#fde8e8;color:#C0392B;font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;margin-bottom:6px}
-
         .divider{height:1px;background:#fde8e8;margin:0 36px}
-
         .promo-section{padding:40px 36px;background:#fdf5f5}
         .promo-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
         .promo-card{border-radius:12px;overflow:hidden;cursor:pointer;position:relative;transition:transform 0.2s;background:#fff;border:1px solid #fde8e8}
@@ -63,7 +57,6 @@
         .promo-info{padding:8px}
         .promo-name{font-size:12px;font-weight:700;color:#333}
         .promo-price{font-size:13px;font-weight:800;color:#E74C3C;margin-top:2px}
-
         .cta{padding:36px;background:#E74C3C;display:flex;align-items:center;justify-content:space-between}
         .cta-text h3{color:#fff;font-size:18px;font-weight:800;margin-bottom:4px}
         .cta-text p{color:rgba(255,255,255,0.7);font-size:13px}
@@ -71,7 +64,6 @@
         .cta-input{background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.35);border-radius:6px;padding:9px 14px;color:#fff;font-size:12px;outline:none;width:160px}
         .cta-input::placeholder{color:rgba(255,255,255,0.55)}
         .btn-cta{background:#fff;color:#C0392B;border:none;padding:9px 20px;border-radius:6px;font-size:12px;font-weight:800;cursor:pointer}
-
         .footer{text-align:center;padding:16px;color:#ccc;font-size:11px;border-top:1px solid #fde8e8}
     </style>
 </head>
@@ -81,18 +73,15 @@
     <a href="/" class="logo">
         <div class="logo-icon">✏️</div> PapelStore
     </a>
-
     <div class="nav-links">
         <a href="#" class="active">Início</a>
         <a href="{{ route('produtos.index') }}">Produtos</a>
         <a href="#promocoes">Promoções</a>
     </div>
-
     <div class="nav-btns">
-    <a href="{{ route('login') }}" class="btn-out">Login</a>
-    <a href="{{ route('register') }}" class="btn-in">Cadastrar</a>
+        <a href="{{ route('login') }}" class="btn-out">Login</a>
+        <a href="{{ route('register') }}" class="btn-in">Cadastrar</a>
     </div>
-    
 </nav>
 
 <div class="hero">
@@ -127,7 +116,7 @@
     </div>
     <div class="glass-grid">
         @foreach($mais_buscados as $index => $produto)
-        <div class="glass-card">
+        <div class="glass-card" onclick="abrirModal('{{ addslashes($produto->nome) }}', '{{ addslashes($produto->marca) }}', '{{ addslashes($produto->categoria) }}', '{{ number_format($produto->preco, 2, ',', '.') }}', '{{ $produto->estoque }}', '{{ addslashes($produto->descricao) }}', '{{ $produto->imagem }}')">
             @if($index === 0)
                 <div class="glass-badge">MAIS VENDIDO</div>
             @elseif($index === 1)
@@ -157,7 +146,7 @@
     </div>
     <div class="promo-grid">
         @forelse($promocoes as $produto)
-        <div class="promo-card">
+        <div class="promo-card" onclick="abrirModal('{{ addslashes($produto->nome) }}', '{{ addslashes($produto->marca) }}', '{{ addslashes($produto->categoria) }}', '{{ number_format($produto->preco, 2, ',', '.') }}', '{{ $produto->estoque }}', '{{ addslashes($produto->descricao) }}', '{{ $produto->imagem }}')">
             @if($produto->imagem)
                 <img src="{{ asset('storage/' . $produto->imagem) }}" class="promo-img">
             @else
@@ -188,6 +177,73 @@
 </div>
 
 <div class="footer">© 2026 PapelStore — Todos os direitos reservados</div>
+
+<!-- Modal -->
+<div id="modal-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:999;align-items:center;justify-content:center;">
+    <div style="background:#fff;border-radius:16px;width:100%;max-width:500px;margin:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.2);">
+        <div style="background:#E74C3C;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;">
+            <h3 id="modal-nome" style="color:#fff;font-size:17px;font-weight:800;margin:0"></h3>
+            <button onclick="fecharModal()" style="background:rgba(255,255,255,0.2);border:none;color:#fff;width:30px;height:30px;border-radius:50%;font-size:16px;cursor:pointer;font-weight:700">×</button>
+        </div>
+        <div style="display:flex;gap:20px;padding:24px;">
+            <div style="flex-shrink:0">
+                <img id="modal-img" src="" style="width:120px;height:120px;object-fit:cover;border-radius:12px;display:none;">
+                <div id="modal-img-placeholder" style="width:120px;height:120px;background:#fde8e8;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:40px;">🛍️</div>
+            </div>
+            <div style="flex:1">
+                <div style="margin-bottom:10px">
+                    <span style="font-size:11px;color:#aaa;text-transform:uppercase;letter-spacing:0.5px">Marca</span>
+                    <p id="modal-marca" style="font-size:14px;font-weight:700;color:#333;margin:2px 0"></p>
+                </div>
+                <div style="margin-bottom:10px">
+                    <span style="font-size:11px;color:#aaa;text-transform:uppercase;letter-spacing:0.5px">Categoria</span>
+                    <p id="modal-categoria" style="font-size:14px;font-weight:700;color:#333;margin:2px 0"></p>
+                </div>
+                <div style="margin-bottom:10px">
+                    <span style="font-size:11px;color:#aaa;text-transform:uppercase;letter-spacing:0.5px">Estoque</span>
+                    <p id="modal-estoque" style="font-size:14px;font-weight:700;color:#333;margin:2px 0"></p>
+                </div>
+                <div>
+                    <span style="font-size:11px;color:#aaa;text-transform:uppercase;letter-spacing:0.5px">Preço</span>
+                    <p id="modal-preco" style="font-size:22px;font-weight:800;color:#E74C3C;margin:2px 0"></p>
+                </div>
+            </div>
+        </div>
+        <div style="padding:0 24px 24px">
+            <span style="font-size:11px;color:#aaa;text-transform:uppercase;letter-spacing:0.5px">Descrição</span>
+            <p id="modal-descricao" style="font-size:13px;color:#555;margin:6px 0 0;line-height:1.7"></p>
+        </div>
+    </div>
+</div>
+
+<script>
+function abrirModal(nome, marca, categoria, preco, estoque, descricao, imagem) {
+    document.getElementById('modal-nome').innerText = nome;
+    document.getElementById('modal-marca').innerText = marca;
+    document.getElementById('modal-categoria').innerText = categoria;
+    document.getElementById('modal-preco').innerText = 'R$ ' + preco;
+    document.getElementById('modal-estoque').innerText = estoque + ' unidades';
+    document.getElementById('modal-descricao').innerText = descricao || 'Sem descrição disponível.';
+    const img = document.getElementById('modal-img');
+    const placeholder = document.getElementById('modal-img-placeholder');
+    if (imagem) {
+        img.src = '/storage/' + imagem;
+        img.style.display = 'block';
+        placeholder.style.display = 'none';
+    } else {
+        img.style.display = 'none';
+        placeholder.style.display = 'flex';
+    }
+    const overlay = document.getElementById('modal-overlay');
+    overlay.style.display = 'flex';
+}
+function fecharModal() {
+    document.getElementById('modal-overlay').style.display = 'none';
+}
+document.getElementById('modal-overlay').addEventListener('click', function(e) {
+    if (e.target === this) fecharModal();
+});
+</script>
 
 </body>
 </html>
